@@ -8,4 +8,10 @@ cask "bat-bin" do
   homepage "https://github.com/sharkdp/bat"
 
   binary "bat-v0.20.0-x86_64-apple-darwin/bat"
+  binary "bat-v0.20.0-x86_64-apple-darwin/autocomplete/bat.bash",
+         target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/bat"
+  binary "bat-v0.20.0-x86_64-apple-darwin/autocomplete/bat.zsh",
+         target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_bat"
+  binary "bat-v0.20.0-x86_64-apple-darwin/autocomplete/bat.fish",
+         target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/bat.fish"
 end
