@@ -7,5 +7,5 @@ cask "tokei-bin" do
   desc "Count your code, quickly."
   homepage "https://github.com/XAMPPRocky/tokei"
 
-  binary "GNUSparseFile.0/tokei"
+  binary "tokei"
 end
