@@ -7,5 +7,5 @@ cask "sccache-bin" do
     desc "sccache is ccache with cloud storage"
     homepage "https://github.com/mozilla/sccache"
   
-    binary "sccache"
+    binary "sccache", target: "sccache"
   end
