@@ -7,6 +7,11 @@ cask "lsd-bin" do
   desc "The next gen ls command"
   homepage "https://github.com/Peltoche/lsd"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   binary "lsd-#{version}-x86_64-apple-darwin/lsd"
   binary "lsd-#{version}-x86_64-apple-darwin/autocomplete/lsd.bash-completion",
          target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/lsd"

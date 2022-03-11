@@ -8,8 +8,8 @@ cask "pnpm-bin" do
   homepage "https://github.com/pnpm/pnpm"
 
   livecheck do
-    url "https://registry.npmjs.org/pnpm/latest"
-    regex(/["']version["']:\s*?["']([^"']+)["']/i)
+    url :stable
+    strategy :github_latest
   end
 
   binary "pnpm-macos-x64", target: "pnpm"

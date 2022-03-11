@@ -7,5 +7,10 @@ cask "sccache-bin" do
   desc "sccache is ccache with cloud storage"
   homepage "https://github.com/mozilla/sccache"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   binary "sccache-v#{version}-x86_64-apple-darwin/sccache"
 end

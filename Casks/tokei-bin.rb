@@ -7,5 +7,10 @@ cask "tokei-bin" do
   desc "Count your code, quickly."
   homepage "https://github.com/XAMPPRocky/tokei"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   binary "tokei"
 end

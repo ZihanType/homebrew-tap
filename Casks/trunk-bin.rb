@@ -7,5 +7,10 @@ cask "trunk-bin" do
   desc "Build, bundle & ship your Rust WASM application to the web."
   homepage "https://github.com/thedodd/trunk"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   binary "trunk"
 end

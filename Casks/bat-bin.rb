@@ -7,6 +7,11 @@ cask "bat-bin" do
   desc "A cat(1) clone with wings."
   homepage "https://github.com/sharkdp/bat"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   binary "bat-v#{version}-x86_64-apple-darwin/bat"
   binary "bat-v#{version}-x86_64-apple-darwin/autocomplete/bat.bash",
          target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/bat"
