@@ -7,11 +7,11 @@ cask "lsd-bin" do
   desc "The next gen ls command"
   homepage "https://github.com/Peltoche/lsd"
 
-  binary "lsd-0.21.0-x86_64-apple-darwin/lsd"
-  binary "lsd-0.21.0-x86_64-apple-darwin/autocomplete/lsd.bash-completion",
+  binary "lsd-#{version}-x86_64-apple-darwin/lsd"
+  binary "lsd-#{version}-x86_64-apple-darwin/autocomplete/lsd.bash-completion",
          target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/lsd"
-  binary "lsd-0.21.0-x86_64-apple-darwin/autocomplete/_lsd",
+  binary "lsd-#{version}-x86_64-apple-darwin/autocomplete/_lsd",
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_lsd"
-  binary "lsd-0.21.0-x86_64-apple-darwin/autocomplete/lsd.fish",
+  binary "lsd-#{version}-x86_64-apple-darwin/autocomplete/lsd.fish",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/lsd.fish"
 end
