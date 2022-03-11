@@ -7,5 +7,5 @@ cask "pnpm-bin" do
   desc "Fast, disk space efficient package manager -- 快速的，节省磁盘空间的包管理工具"
   homepage "https://github.com/pnpm/pnpm"
 
-  binary "pnpm-macos-x64"
+  binary "pnpm-macos-x64", target: "pnpm"
 end
