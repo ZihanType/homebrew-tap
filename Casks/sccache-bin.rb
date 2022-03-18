@@ -8,7 +8,7 @@ cask "sccache-bin" do
   homepage "https://github.com/mozilla/sccache"
 
   livecheck do
-    url :stable
+    url :url
     strategy :github_latest
   end
 

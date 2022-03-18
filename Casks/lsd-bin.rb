@@ -8,7 +8,7 @@ cask "lsd-bin" do
   homepage "https://github.com/Peltoche/lsd"
 
   livecheck do
-    url :stable
+    url :url
     strategy :github_latest
   end
 

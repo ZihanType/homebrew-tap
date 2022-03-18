@@ -8,7 +8,7 @@ cask "bat-bin" do
   homepage "https://github.com/sharkdp/bat"
 
   livecheck do
-    url :stable
+    url :url
     strategy :github_latest
   end
 

@@ -8,7 +8,7 @@ cask "trunk-bin" do
   homepage "https://github.com/thedodd/trunk"
 
   livecheck do
-    url :stable
+    url :url
     strategy :github_latest
   end
 

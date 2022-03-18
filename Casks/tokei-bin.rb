@@ -8,7 +8,7 @@ cask "tokei-bin" do
   homepage "https://github.com/XAMPPRocky/tokei"
 
   livecheck do
-    url :stable
+    url :url
     strategy :github_latest
   end
 
