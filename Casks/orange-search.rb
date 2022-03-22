@@ -8,8 +8,9 @@ cask "orange-search" do
   homepage "https://github.com/naaive/orange"
 
   livecheck do
-    url :stable
-    strategy :github_latest
+    url :url
+    strategy :page_match
+    regex(/href=.*?\/tag\/orange-v?(\d+(?:\.\d+)+)["' >]/i)
   end
 
   app "Orange.app"
