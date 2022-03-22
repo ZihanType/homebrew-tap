@@ -8,7 +8,7 @@ cask "orange-search" do
   homepage "https://github.com/naaive/orange"
 
   livecheck do
-    url :url
+    url :stable
     strategy :github_latest
   end
 
