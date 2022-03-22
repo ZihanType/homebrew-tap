@@ -13,4 +13,8 @@ cask "orange" do
   end
 
   app "Orange.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.github.Orange",
+  ]
 end
