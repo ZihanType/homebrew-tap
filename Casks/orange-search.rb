@@ -7,12 +7,6 @@ cask "orange-search" do
   desc "Cross-platform local file search engine."
   homepage "https://github.com/naaive/orange"
 
-  livecheck do
-    url :url
-    strategy :page_match
-    regex(%r{.*/naaive/orange/releases/tag/orange-v([.\d]+)"}i)
-  end
-
   app "Orange.app"
 
   zap trash: [
