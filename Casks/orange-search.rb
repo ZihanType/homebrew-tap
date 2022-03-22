@@ -10,7 +10,7 @@ cask "orange-search" do
   livecheck do
     url :url
     strategy :page_match
-    regex(/href=.*?\/tag\/orange-v?(\d+(?:\.\d+)+)["' >]/i)
+    regex(%r{.*/naaive/orange/releases/tag/orange-v([.\d]+)"}i)
   end
 
   app "Orange.app"
