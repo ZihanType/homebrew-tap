@@ -1,6 +1,6 @@
 cask "orange-search" do
-  version "0.1.0"
-  sha256 "4d2d3f9c6bde0916c2e4a139a71cc782365bc24a62de22b310d361ec5e8bbc33"
+  version "0.3.0"
+  sha256 "31e82724dba16ddce3a1a6d08765e6519f51d3dbcc8a00a3713d95c146f68369"
 
   url "https://github.com/naaive/orange/releases/download/orange-v#{version}/Orange_#{version}_x64.dmg"
   name "orange-search"
