@@ -14,4 +14,10 @@ cask "pdmaner" do
   end
 
   app "PDManer.app"
+
+  zap trash: [
+    "~/Library/Application Support/PDManer",
+    "~/Library/Saved Application State/PDManer.savedState",
+    "~/Library/Preferences/PDManer.plist",
+  ]
 end
