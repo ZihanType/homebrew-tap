@@ -1,4 +1,4 @@
-cask "PDManer" do
+cask "pdmaner" do
   version "4.0.0"
   sha256 "68332ec5e4ccb37027aec6e3964cf062b8fc6649d70f756b69733bcbd7cec607"
 
