@@ -12,5 +12,5 @@ cask "wasm-bindgen-bin" do
     strategy :github_latest
   end
 
-  binary "wasm-bindgen-#{version}-x86_64-apple-darwin/wasm-pack"
+  binary "wasm-bindgen-#{version}-x86_64-apple-darwin/wasm-bindgen"
 end
