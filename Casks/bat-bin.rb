@@ -1,6 +1,6 @@
 cask "bat-bin" do
-  version "0.20.0"
-  sha256 "ba3dde7e7d954e31215ecf50f441580a8c6ee3e3002d9e2e3f5852919833f0ea"
+  version "0.21.0"
+  sha256 "7b0bf052aff98dbe4b5f259b0d3a8b320b5ee03fbde6a31bb0b4a08ad0ce58aa"
 
   url "https://github.com/sharkdp/bat/releases/download/v#{version}/bat-v#{version}-x86_64-apple-darwin.tar.gz"
   name "bat-bin"
