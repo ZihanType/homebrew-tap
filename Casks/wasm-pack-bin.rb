@@ -12,5 +12,5 @@ cask "wasm-pack-bin" do
     strategy :github_latest
   end
 
-  binary "wasm-pack"
+  binary "wasm-pack-v#{version}-x86_64-apple-darwin/wasm-pack"
 end
