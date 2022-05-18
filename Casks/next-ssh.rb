@@ -18,5 +18,6 @@ cask "next-ssh" do
     "~/Library/Application Support/NextSSH",
     "~/Library/Saved Application State/com.xzhshch.nextssh.savedState",
     "~/Library/Preferences/com.xzhshch.nextssh.plist",
+    "~/Library/Logs/NextSSH",
   ]
 end
