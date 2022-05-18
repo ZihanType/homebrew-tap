@@ -13,4 +13,10 @@ cask "next-ssh" do
   end
 
   app "NextSSH.app"
+
+  zap trash: [
+    "~/Library/Application Support/NextSSH",
+    "~/Library/Saved Application State/com.xzhshch.nextssh.savedState",
+    "~/Library/Preferences/com.xzhshch.nextssh.plist",
+  ]
 end
