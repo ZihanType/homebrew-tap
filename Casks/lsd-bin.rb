@@ -1,6 +1,6 @@
 cask "lsd-bin" do
-  version "0.21.0"
-  sha256 "a0bbce1485e88e9afa688481ffb74fc8efcbc95111790c4e581d3bc747c4010b"
+  version "0.22.0"
+  sha256 "663f3d5d591e75e409bb8acb3c2e9d3fd5c49199d7520cec2b0d0f46fde5aa4e"
 
   url "https://github.com/Peltoche/lsd/releases/download/#{version}/lsd-#{version}-x86_64-apple-darwin.tar.gz"
   name "lsd-bin"
