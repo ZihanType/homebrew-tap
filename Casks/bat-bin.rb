@@ -19,4 +19,10 @@ cask "bat-bin" do
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_bat"
   binary "bat-v#{version}-x86_64-apple-darwin/autocomplete/bat.fish",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/bat.fish"
+
+  uninstall delete: [
+    "#{HOMEBREW_PREFIX}/etc/bash_completion.d/bat",
+    "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_bat",
+    "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/bat.fish",
+  ]
 end
