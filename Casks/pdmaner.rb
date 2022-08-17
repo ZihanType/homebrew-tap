@@ -1,6 +1,6 @@
 cask "pdmaner" do
-  version "4.1.3"
-  sha256 "c11064238bc292d05b33d93f16a4c078a841857d4aa063a33a6027157de73f5a"
+  version "4.1.4"
+#   sha256 "c11064238bc292d05b33d93f16a4c078a841857d4aa063a33a6027157de73f5a"
 
   url "http://chiner-release.httpchk.com/PDManer-mac_v#{version}.dmg"
   name "PDManer"
