@@ -11,8 +11,6 @@ cask "intellij-idea-cli" do
     skip "no version"
   end
 
-  depends_on cask: "intellij-idea"
-
   binary idea
 
   preflight do
