@@ -1,6 +1,6 @@
 cask "edgedriver" do
-  version "105.0.1343.25"
-  sha256 "e4e441fd6d3727813e4abb8dbf9caa13e21dcf2cc0f346b8f5d2dcc8c473933e"
+  version "105.0.1343.33"
+  sha256 "8ba14b0931b50b180510a2e2ed8bb63e534e26ebc09c766b03eac60852291af1"
   linkid = Hardware::CPU.intel? ? "2069148" : "2093504"
 
   url "https://msedgedriver.azureedge.net/#{version}/edgedriver_mac64.zip"
