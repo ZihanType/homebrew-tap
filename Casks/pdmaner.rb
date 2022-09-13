@@ -10,7 +10,7 @@ cask "pdmaner" do
   livecheck do
     url "https://gitee.com/robergroup/pdmaner"
     strategy :page_match
-    regex(%r{.*/robergroup/pdmaner/releases/v([.\d]+)"}i)
+    regex(%r{.*/robergroup/pdmaner/releases/tag/v([.\d]+)"}i)
   end
 
   app "PDManer.app"
