@@ -1,6 +1,6 @@
 cask "starship-bin" do
-  version "1.10.3"
-  sha256 "bf959619efc07ab76e02b635bbf30a35b3b2fd994020e4ff5d360bbf3371578e"
+  version "1.11.0"
+  sha256 "55138c8c40ea1fceb0360dc8d184e9d370183c121cd1fe2272507a3d12be51f6"
 
   url "https://github.com/starship/starship/releases/download/v#{version}/starship-x86_64-apple-darwin.tar.gz"
   name "starship-bin"
