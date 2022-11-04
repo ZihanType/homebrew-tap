@@ -8,8 +8,8 @@ cask "cargo-nextest-bin" do
   homepage "https://nexte.st"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url :stable
+    regex(/^cargo-nextest[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
   binary "cargo-nextest"
