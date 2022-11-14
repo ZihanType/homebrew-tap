@@ -1,6 +1,6 @@
 cask "sccache-bin" do
-  version "0.3.0"
-  sha256 "61c16fd36e32cdc923b66e4f95cb367494702f60f6d90659af1af84c3efb11eb"
+  version "0.3.1"
+  sha256 "d8ade8d98cef392e6b256d184690e1d722f263c9f0bd83938fdd524e839c9e58"
 
   url "https://github.com/mozilla/sccache/releases/download/v#{version}/sccache-v#{version}-x86_64-apple-darwin.tar.gz"
   name "sccache-bin"
