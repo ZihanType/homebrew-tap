@@ -18,7 +18,7 @@ cask "pnpm-bin" do
     <<~EOS
       To activate pnpm, add the following to your ~/.zshrc or ~/.bashrc:
         # pnpm
-        export PNPM_HOME="pnpm global cli path"
+        export PNPM_HOME="pnpm global binary path"
         export PATH="$PNPM_HOME:$PATH"
         # pnpm end
     EOS
