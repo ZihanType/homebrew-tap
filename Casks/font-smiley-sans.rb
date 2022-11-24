@@ -13,5 +13,5 @@ cask "font-smiley-sans" do
     strategy :github_latest
   end
 
-  font "smiley-sans-v#{version}/SmileySans-Oblique.ttf"
+  font "SmileySans-Oblique.ttf"
 end
