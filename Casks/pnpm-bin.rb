@@ -1,6 +1,6 @@
 cask "pnpm-bin" do
-  version "7.17.1"
-  sha256 "3647cb56976bddd961e6afa0e6639f8f601dd0dae1c4dafe5412d090b84732c6"
+  version "7.18.0"
+  sha256 "fe36e931d934ab51fe23ab3781cea4ea1f108e6c6cbd1635b322f0c61961bec8"
 
   url "https://github.com/pnpm/pnpm/releases/download/v#{version}/pnpm-macos-x64"
   name "pnpm-bin"
