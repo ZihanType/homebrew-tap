@@ -1,6 +1,6 @@
 cask "pdmaner" do
-  version "4.3.0"
-  sha256 "d866cd9fdb16fd13d39df813388a95feaa0324eb983a55cda64b18028a8e1ba9"
+  version "4.4.0"
+  sha256 "dcf12279cbe4dbf4d7717e85e44e02ae39d5ab5de464607c50c3e3bec3083309"
 
   url "https://github.com/ZihanType/homebrew-tap/releases/download/pdmaner-v#{version}/PDManer-mac_v#{version}.dmg"
   name "PDManer"
