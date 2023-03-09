@@ -12,5 +12,5 @@ cask "erdtree-bin" do
     strategy :github_latest
   end
 
-  binary "et-v#{version}-x86_64-apple-darwin/GNUSparseFile.0/et"
+  binary "GNUSparseFile.0/et"
 end
