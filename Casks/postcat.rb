@@ -13,4 +13,12 @@ cask "postcat" do
   end
 
   app "Postcat.app"
+
+  zap trash: [
+    "~/.postcat",
+    "~/Library/Application Support/postcat",
+    "~/Library/Saved Application State/.postcat.io.savedState",
+    "~/Library/Preferences/.postcat.io.plist",
+    "~/Library/Logs/postcat",
+  ]
 end
