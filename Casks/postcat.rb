@@ -1,6 +1,6 @@
 cask "postcat" do
-  version "0.3.2"
-  sha256 "630b9c83c5b8aa268c3c883649fa7c663e244b2d4a9b739ae0c8bd98479b3efa"
+  version "0.4.0"
+  sha256 "1ff8431ba516302de22bd6764c0d0c900a7eccb42883419e7e0273368f4c1ba5"
 
   url "https://github.com/Postcatlab/postcat/releases/download/v#{version}/Postcat-#{version}-mac.zip"
   name "Postcat"
