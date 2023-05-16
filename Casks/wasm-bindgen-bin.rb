@@ -1,6 +1,6 @@
 cask "wasm-bindgen-bin" do
-  version "0.2.85"
-  sha256 "93ad6a22d21a8f3ef1a1f7fabeea794c654978b9122e503b6f884a0b6f9d8aa5"
+  version "0.2.86"
+  sha256 "615d68eabb39d379308b8af55071f05257862be86db7a116a8db141b85e16c8d"
 
   url "https://github.com/rustwasm/wasm-bindgen/releases/download/#{version}/wasm-bindgen-#{version}-x86_64-apple-darwin.tar.gz"
   name "wasm-bindgen-bin"
