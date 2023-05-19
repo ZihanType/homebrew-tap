@@ -8,8 +8,9 @@ cask "binaryen-bin" do
   homepage "https://github.com/WebAssembly/binaryen"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/WebAssembly/binaryen"
+    strategy :page_match
+    regex(%r{.*/WebAssembly/binaryen/releases/tag/version_([.\d]+)}i)
   end
 
   binary "binaryen-version_#{version}/bin/binaryen-unittests"
