@@ -1,6 +1,6 @@
 cask "cargo-generate-bin" do
-  version "0.18.2"
-  sha256 "db340817e28aa8cb1914bda5be1756598f5869917bfda347c3c4a74304177c0a"
+  version "0.18.3"
+  sha256 "7f8ce7b78eafe92d469412014d467d65c33bb81a342398797150b5d58f28dc35"
 
   url "https://github.com/cargo-generate/cargo-generate/releases/download/v#{version}/cargo-generate-v#{version}-x86_64-apple-darwin.tar.gz"
   name "cargo-generate-bin"
