@@ -1,6 +1,6 @@
 cask "erdtree-bin" do
-  version "3.0.1"
-  sha256 "027bce209b7010215a7d3f4832f7eeb13ea97a55eca6d6ef318db55b59ef1a49"
+  version "3.0.2"
+  sha256 "d0b3ee6743f0532c35cbd7eba724e74586ac31f10a6c56446454861e49d8d016"
 
   url "https://github.com/solidiquis/erdtree/releases/download/v#{version}/erd-v#{version}-x86_64-apple-darwin.tar.gz"
   name "erdtree-bin"
