@@ -1,6 +1,6 @@
 cask "rye-bin" do
-  version "0.11.0"
-  sha256 "0e0f76b43b02c04f2159df75a4e0e39e6642d50efed4a4f0d6d7d3ca42d8eb34"
+  version "0.12.0"
+  sha256 "2b36b6d17218983a4c6f53c09ae45f1088525d289c8b5b6703b9081f771ad653"
 
   url "https://github.com/mitsuhiko/rye/releases/download/#{version}/rye-x86_64-macos.gz"
   name "rye-bin"
