@@ -1,6 +1,6 @@
 cask "binaryen-bin" do
-  version "115"
-  sha256 "d82b7485671152ab8a838091b4356dd66908078e73c0918350d7770e4994f287"
+  version "116"
+  sha256 "266f63d3d8d9e17d5e532b8fc6c5340f92b3fea2020a634957a6dd938294ba56"
 
   url "https://github.com/WebAssembly/binaryen/releases/download/version_#{version}/binaryen-version_#{version}-x86_64-macos.tar.gz"
   name "binaryen-bin"
