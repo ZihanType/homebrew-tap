@@ -6,7 +6,6 @@ cask "bun-bin" do
   name "bun-bin"
   desc "Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one."
   homepage "https://bun.sh/"
-  license "MIT"
 
   livecheck do
     url "https://github.com/oven-sh/bun/releases/latest"
