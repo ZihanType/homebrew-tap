@@ -13,4 +13,11 @@ cask "bun-bin" do
   end
 
   binary "bun-darwin-x64/bun"
+
+  def caveats
+    <<~EOS
+      To generate completion script, run:
+        bun completions
+    EOS
+  end
 end
