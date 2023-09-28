@@ -1,6 +1,6 @@
 cask "cargo-nextest-bin" do
-  version "0.9.58"
-  sha256 "a8174c1d2bfe57aac1b4bac71d85b7a159315cfae0721b88f1664b0115fac2fa"
+  version "0.9.59"
+  sha256 "3137a3184d1d6d5e4c3f3142f2bbb96cb25a2cc912b1b2bcdd8fc9e1c08c89e2"
 
   url "https://github.com/nextest-rs/nextest/releases/download/cargo-nextest-#{version}/cargo-nextest-#{version}-universal-apple-darwin.tar.gz"
   name "cargo-nextest-bin"
