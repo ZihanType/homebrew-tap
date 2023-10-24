@@ -12,16 +12,16 @@ cask "wabt-bin" do
     strategy :github_latest
   end
 
-  binary "wabt-#{version}/bin/GNUSparseFile.0/spectest-interp"
-  binary "wabt-#{version}/bin/GNUSparseFile.0/wasm-decompile"
-  binary "wabt-#{version}/bin/GNUSparseFile.0/wasm-interp"
-  binary "wabt-#{version}/bin/GNUSparseFile.0/wasm-objdump"
-  binary "wabt-#{version}/bin/GNUSparseFile.0/wasm-opcodecnt"
-  binary "wabt-#{version}/bin/GNUSparseFile.0/wasm-strip"
-  binary "wabt-#{version}/bin/GNUSparseFile.0/wasm-validate"
-  binary "wabt-#{version}/bin/GNUSparseFile.0/wasm2c"
-  binary "wabt-#{version}/bin/GNUSparseFile.0/wasm2wat"
-  binary "wabt-#{version}/bin/GNUSparseFile.0/wast2json"
-  binary "wabt-#{version}/bin/GNUSparseFile.0/wat-desugar"
-  binary "wabt-#{version}/bin/GNUSparseFile.0/wat2wasm"
+  binary "wabt-#{version}/bin/spectest-interp"
+  binary "wabt-#{version}/bin/wasm-decompile"
+  binary "wabt-#{version}/bin/wasm-interp"
+  binary "wabt-#{version}/bin/wasm-objdump"
+  binary "wabt-#{version}/bin/wasm-opcodecnt"
+  binary "wabt-#{version}/bin/wasm-strip"
+  binary "wabt-#{version}/bin/wasm-validate"
+  binary "wabt-#{version}/bin/wasm2c"
+  binary "wabt-#{version}/bin/wasm2wat"
+  binary "wabt-#{version}/bin/wast2json"
+  binary "wabt-#{version}/bin/wat-desugar"
+  binary "wabt-#{version}/bin/wat2wasm"
 end
