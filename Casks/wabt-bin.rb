@@ -1,6 +1,6 @@
 cask "wabt-bin" do
-  version "1.0.33"
-  sha256 "25d66b5014824a18fca78b187e4f16f416594b3a13af0565bc3978b94e04b7ca"
+  version "1.0.34"
+  sha256 "b5c93c088dae1cd38a7dc94319c60d2b6653a48ddce0f5ca93c8f0858a00e714"
 
   url "https://github.com/WebAssembly/wabt/releases/download/#{version}/wabt-#{version}-macos-12.tar.gz"
   name "wabt-bin"
