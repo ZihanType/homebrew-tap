@@ -16,7 +16,7 @@ cask "wabt-bin" do
   binary "wabt-#{version}/bin/wasm-decompile"
   binary "wabt-#{version}/bin/wasm-interp"
   binary "wabt-#{version}/bin/wasm-objdump"
-  binary "wabt-#{version}/bin/wasm-opcodecnt"
+  binary "wabt-#{version}/bin/wasm-stats"
   binary "wabt-#{version}/bin/wasm-strip"
   binary "wabt-#{version}/bin/wasm-validate"
   binary "wabt-#{version}/bin/wasm2c"
