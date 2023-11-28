@@ -1,6 +1,6 @@
 cask "cargo-tarpaulin-bin" do
-  version "0.27.1"
-  sha256 "9c833aa8ec463d3825009ebd509e015a479de716aae89bd78ca76bc45607304c"
+  version "0.27.2"
+  sha256 "6d577a7a21881fd5a57e0e4aedd61c4235f5bacc1e645f3acdd7c8ceceee5115"
 
   url "https://github.com/xd009642/tarpaulin/releases/download/#{version}/cargo-tarpaulin-x86_64-apple-darwin.tar.gz"
   name "cargo-tarpaulin-bin"
