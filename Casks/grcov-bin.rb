@@ -1,6 +1,6 @@
 cask "grcov-bin" do
-  version "0.8.18"
-  sha256 "b5fccffcde800c1bbaec94229b80fc678ad10420d9769b25a447f1c7c5bec573"
+  version "0.8.19"
+  sha256 "8c4a46740c09ec071ad20eaf916175b8cf7322eacb7c37e905f3d2925690c44a"
 
   url "https://github.com/mozilla/grcov/releases/download/v#{version}/grcov-x86_64-apple-darwin.tar.bz2"
   name "grcov-bin"
