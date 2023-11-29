@@ -1,6 +1,6 @@
 cask "ripgrep-bin" do
-  version "14.0.2"
-  sha256 "acc198580b1cc8fbb3c64d651ebc870b4e2d294b32de4584c61beefdb09d1998"
+  version "14.0.3"
+  sha256 "dd06bebd3a9d75981f8e3271b6c69286990f3fc1a374f0e5b0fc2866ec69bc4c"
 
   url "https://github.com/BurntSushi/ripgrep/releases/download/#{version}/ripgrep-#{version}-x86_64-apple-darwin.tar.gz"
   name "ripgrep-bin"
