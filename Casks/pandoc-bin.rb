@@ -1,6 +1,6 @@
 cask "pandoc-bin" do
-  version "3.1.11"
-  sha256 "56a337e08f7e03ca062fbd4c4ac182523c35429d1441d826a138a8c9dcc2354b"
+  version "3.1.11.1"
+  sha256 "0018eddd489389ac4e6cf6f4711c1ad49574361c04282e075400fad2c0050084"
 
   url "https://github.com/jgm/pandoc/releases/download/#{version}/pandoc-#{version}-x86_64-macOS.zip"
   name "pandoc-bin"
