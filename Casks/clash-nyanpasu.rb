@@ -1,6 +1,6 @@
 cask "clash-nyanpasu" do
-  version "1.4.2"
-  sha256 "8d99046c64dec68acd219fbdc529a019e2368e75ca86b2dec8d51206ac932803"
+  version "1.4.3"
+  sha256 "31cca0554ac5569a919e6bd6d212c0492c1bdc6d4a7f7f5f94c2a0cc3e45c359"
 
   url "https://github.com/keiko233/clash-nyanpasu/releases/download/v#{version}/Clash.Nyanpasu_#{version}_x64.dmg"
   name "Clash Nyanpasu"
