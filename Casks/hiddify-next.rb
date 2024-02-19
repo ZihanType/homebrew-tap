@@ -15,4 +15,10 @@ cask "hiddify-next" do
   container nested: "hiddify-macos-universal.dmg"
 
   app "Hiddify Next.app"
+
+  zap trash: [
+    "~/Library/Application Support/app.hiddify.com",
+    "~/Library/Preferences/app.hiddify.com.plist",
+    "~/Library/Caches/SentryCrash/Hiddify Next",
+  ]
 end
