@@ -12,5 +12,7 @@ cask "hiddify-next" do
     strategy :github_latest
   end
 
+  container nested: "hiddify-macos-universal.dmg"
+
   app "Hiddify Next.app"
 end
