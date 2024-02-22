@@ -13,4 +13,13 @@ cask "rye-bin" do
   end
 
   binary "rye-x86_64-macos", target: "rye"
+
+  def caveats
+    <<~EOS
+      Add the `shims` folder into your PATH:
+        set -Ua fish_user_paths "$HOME/.rye/shims"
+      To generate completion script, run:
+        rye self completion -s fish > ~/.config/fish/completions/rye.fish
+    EOS
+  end
 end
