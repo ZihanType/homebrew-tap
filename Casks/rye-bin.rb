@@ -1,11 +1,11 @@
 cask "rye-bin" do
-  version "0.26.0"
-  sha256 "f88cc7a8e6cca749c66486a5dc5b3403b1f59da9e6026df4fc70be742db761c3"
+  version "0.27.0"
+  sha256 "9da191b434541ba4c9d1c1c881909bddaa8326be70922e81bec5341d57381de9"
 
-  url "https://github.com/mitsuhiko/rye/releases/download/#{version}/rye-x86_64-macos.gz"
+  url "https://github.com/astral-sh/rye/releases/download/#{version}/rye-x86_64-macos.gz"
   name "rye-bin"
-  desc "An Experimental Package Management Solution for Python"
-  homepage "https://github.com/mitsuhiko/rye"
+  desc "a Hassle-Free Python Experience"
+  homepage "https://github.com/astral-sh/rye"
 
   livecheck do
     url :url
