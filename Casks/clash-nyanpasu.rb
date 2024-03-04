@@ -13,4 +13,11 @@ cask "clash-nyanpasu" do
   end
 
   app "Clash Nyanpasu.app"
+
+  zap trash: [
+    "~/.config/clash-nyanpasu",
+    "~/Library/Saved Application State/moe.elaina.clash.nyanpasu.savedState",
+    "~/Library/WebKit/moe.elaina.clash.nyanpasu",
+    "~/Library/Caches/moe.elaina.clash.nyanpasu",
+  ]
 end
