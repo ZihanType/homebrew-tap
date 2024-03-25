@@ -1,6 +1,6 @@
 cask "lsd-bin" do
-  version "1.1.1"
-  sha256 "14004f806eaa0383c87f53830db5a6763fde5b2ee2594e2c769b42ced34b78bb"
+  version "1.1.2"
+  sha256 "df5cc97fe1c63d3de4e7fda7594743fd961f75024062b1a0c58ca296b8337eb8"
 
   url "https://github.com/lsd-rs/lsd/releases/download/v#{version}/lsd-v#{version}-x86_64-apple-darwin.tar.gz"
   name "lsd-bin"
