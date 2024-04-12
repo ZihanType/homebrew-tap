@@ -12,5 +12,5 @@ cask "cargo-deny-bin" do
     strategy :github_latest
   end
 
-  binary "cargo-deny"
+  binary "cargo-deny-#{version}-x86_64-apple-darwin/cargo-deny"
 end
