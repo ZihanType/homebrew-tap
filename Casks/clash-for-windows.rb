@@ -10,6 +10,10 @@ cask "clash-for-windows" do
   desc "GUI based on Clash"
   homepage "https://github.com/Fndroid/clash_for_windows_pkg"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   depends_on macos: ">= :high_sierra"
 
   app "Clash for Windows.app"
