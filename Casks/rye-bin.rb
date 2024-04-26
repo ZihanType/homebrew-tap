@@ -1,6 +1,6 @@
 cask "rye-bin" do
-  version "0.32.0"
-  sha256 "dc5459e337fb07f7277686b03bcb11d818fd576ae377f742de47e83810dbdc04"
+  version "0.33.0"
+  sha256 "e4d5529c65fa4f5f408dde0d2391c75726a69c48a252c25e8673ac407080e51a"
 
   url "https://github.com/astral-sh/rye/releases/download/#{version}/rye-x86_64-macos.gz"
   name "rye-bin"
