@@ -1,6 +1,6 @@
 cask "bun-bin" do
-  version "1.1.4"
-  sha256 "33a32860f3421813f42ae367bfc70e9e6e3b149cb123a317cec5fe16f1f10040" # bun-darwin-x64.zip
+  version "1.1.5"
+  sha256 "8a8cfb32cceaa4449e5b9464f747f42232727ed2df94f94ed7fa4e53569e5156" # bun-darwin-x64.zip
 
   url "https://github.com/oven-sh/bun/releases/download/bun-v#{version}/bun-darwin-x64.zip"
   name "bun-bin"
