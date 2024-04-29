@@ -6,7 +6,6 @@ cask "fish-bin" do
   name "fish-bin"
   desc "User-friendly command-line shell for UNIX-like operating systems"
   homepage "https://fishshell.com"
-  license "GPL-2.0-only"
 
   livecheck do
     url :stable
