@@ -1,6 +1,6 @@
 cask "vfox-bin" do
-  version "0.5.0"
-  sha256 "aa722ec6fcb1081a908cfc567fac264cc7476fe99a7dc45adefb2366d6eeeab2"
+  version "0.5.1"
+  sha256 "8bfd51d93c5e1448ef15246322108dca8f915da5fa1a148dae659bbf43b3e706"
 
   url "https://github.com/version-fox/vfox/releases/download/v#{version}/vfox_#{version}_macos_x86_64.tar.gz"
   name "vfox-bin"
