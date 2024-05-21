@@ -1,10 +1,10 @@
 cask "rye-bin" do
-  version "0.33.0"
-  sha256 "e4d5529c65fa4f5f408dde0d2391c75726a69c48a252c25e8673ac407080e51a"
+  version "0.34.0"
+  sha256 "929831045085dad753e2a58e0ae3e052b1a62e431ffee8ea00c6f525c7b3ee6c"
 
   url "https://github.com/astral-sh/rye/releases/download/#{version}/rye-x86_64-macos.gz"
   name "rye-bin"
-  desc "a Hassle-Free Python Experience"
+  desc "Experimental Package Management Solution for Python"
   homepage "https://github.com/astral-sh/rye"
 
   livecheck do
@@ -17,7 +17,7 @@ cask "rye-bin" do
   def caveats
     <<~EOS
       Add the `shims` folder into your PATH:
-        set -Ua fish_user_paths "$HOME/.rye/shims"
+        set -gx PATH $PATH $HOME/.rye/shims
       To generate completion script, run:
         rye self completion -s fish > ~/.config/fish/completions/rye.fish
     EOS
