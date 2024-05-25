@@ -1,6 +1,6 @@
 cask "cargo-deny-bin" do
-  version "0.14.23"
-  sha256 "d8d3e97d95521dcc2e95a4293b3e774aeee5591cad9994ad49b5d177ca98bf8e"
+  version "0.14.24"
+  sha256 "47b7b07fb210b871027adb3a08fe85fa1a54e4403b523feaa844f3db029e96c8"
 
   url "https://github.com/EmbarkStudios/cargo-deny/releases/download/#{version}/cargo-deny-#{version}-x86_64-apple-darwin.tar.gz"
   name "cargo-deny-bin"
