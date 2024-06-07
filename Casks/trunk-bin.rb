@@ -1,6 +1,6 @@
 cask "trunk-bin" do
-  version "0.20.1"
-  sha256 "838e69507df6c95667e95cf6b4ab0d38694e339e4fadad81ad5ad66359921db3"
+  version "0.20.2"
+  sha256 "e24f60a52d5573c5adfc59493891634f7f2825463b04160347a316cda44b496f"
 
   url "https://github.com/thedodd/trunk/releases/download/v#{version}/trunk-x86_64-apple-darwin.tar.gz"
   name "trunk-bin"
