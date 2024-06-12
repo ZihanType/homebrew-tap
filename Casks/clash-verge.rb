@@ -1,6 +1,6 @@
 cask "clash-verge" do
-  version "1.6.5"
-  sha256 "98642ee60bb6b9e2944432d333a22598f2cff8ed1cf67d1cb5d87c94b94cd299"
+  version "1.6.6"
+  sha256 "90eb3a5f5a8175d73e63616e4e9afff7db4b438924b9854963bf8f06230c9cc8"
 
   url "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v#{version}/Clash.Verge_#{version}_x64.dmg"
   name "Clash Verge"
