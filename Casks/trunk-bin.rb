@@ -1,8 +1,9 @@
 cask "trunk-bin" do
-  version "0.20.2"
-  sha256 "e24f60a52d5573c5adfc59493891634f7f2825463b04160347a316cda44b496f"
+  arch arm: "aarch64", intel: "x86_64"
 
-  url "https://github.com/thedodd/trunk/releases/download/v#{version}/trunk-x86_64-apple-darwin.tar.gz"
+  version "0.20.2"
+
+  url "https://github.com/thedodd/trunk/releases/download/v#{version}/trunk-#{arch}-apple-darwin.tar.gz"
   name "trunk-bin"
   desc "Build, bundle & ship your Rust WASM application to the web."
   homepage "https://github.com/thedodd/trunk"
