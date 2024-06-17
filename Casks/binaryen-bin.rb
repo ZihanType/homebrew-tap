@@ -2,7 +2,6 @@ cask "binaryen-bin" do
   arch arm: "arm64", intel: "x86_64"
 
   version "117"
-  sha256 "c0be7b448888f2c851a853ca19299b09d42cac8c3090c716d14cc8ec3c0ac849"
 
   url "https://github.com/WebAssembly/binaryen/releases/download/version_#{version}/binaryen-version_#{version}-#{arch}-macos.tar.gz"
   name "binaryen-bin"
