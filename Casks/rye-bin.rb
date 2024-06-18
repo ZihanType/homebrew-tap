@@ -1,8 +1,9 @@
 cask "rye-bin" do
-  version "0.34.0"
-  sha256 "929831045085dad753e2a58e0ae3e052b1a62e431ffee8ea00c6f525c7b3ee6c"
+  arch arm: "aarch64", intel: "x86_64"
 
-  url "https://github.com/astral-sh/rye/releases/download/#{version}/rye-x86_64-macos.gz"
+  version "0.34.0"
+
+  url "https://github.com/astral-sh/rye/releases/download/#{version}/rye-#{arch}-macos.gz"
   name "rye-bin"
   desc "Experimental Package Management Solution for Python"
   homepage "https://github.com/astral-sh/rye"
@@ -12,7 +13,7 @@ cask "rye-bin" do
     strategy :github_latest
   end
 
-  binary "rye-x86_64-macos", target: "rye"
+  binary "rye-#{arch}-macos", target: "rye"
 
   def caveats
     <<~EOS
