@@ -1,12 +1,12 @@
 cask "vfox-bin" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.5.3"
+  version "0.5.4"
 
   url "https://github.com/version-fox/vfox/releases/download/v#{version}/vfox_#{version}_macos_#{arch}.tar.gz"
   name "vfox-bin"
   desc "Version manager with support for Java, Node.js, Flutter, .NET & more"
-  homepage "https://vfox.lhan.me"
+  homepage "https://github.com/version-fox/vfox"
 
   livecheck do
     url :url
