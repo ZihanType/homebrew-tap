@@ -1,18 +1,19 @@
 cask "pnpm-bin" do
-  version "9.1.0"
-  sha256 "9307128a0837b24a8186b2b4580149060820f3b5e2cd715e212c54f4c743d7b3"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/pnpm/pnpm/releases/download/v#{version}/pnpm-macos-x64"
+  version "9.4.0"
+
+  url "https://github.com/pnpm/pnpm/releases/download/v#{version}/pnpm-macos-#{arch}"
   name "pnpm-bin"
-  desc "📦🚀 Fast, disk space efficient package manager"
-  homepage "https://pnpm.io/"
+  desc "Fast, disk space efficient package manager"
+  homepage "https://github.com/pnpm/pnpm"
 
   livecheck do
     url "https://registry.npmjs.org/pnpm/latest"
     regex(/["']version["']:\s*?["']([^"']+)["']/i)
   end
 
-  binary "pnpm-macos-x64", target: "pnpm"
+  binary "pnpm-macos-#{arch}", target: "pnpm"
 
   def caveats
     <<~EOS
@@ -20,7 +21,6 @@ cask "pnpm-bin" do
         # pnpm
         export PNPM_HOME="pnpm global binary path"
         export PATH="$PNPM_HOME:$PATH"
-        # pnpm end
     EOS
   end
 end
