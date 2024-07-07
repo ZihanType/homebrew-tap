@@ -13,13 +13,5 @@ cask "fish-bin" do
   end
 
   app "fish.app"
-
-  def caveats
-    <<~EOS
-      To generate symbolic link, run:
-        ln -s /Applications/fish.app/Contents/Resources/base/usr/local/bin/fish /usr/local/bin/fish
-      To remove symbolic link, run:
-        rm /usr/local/bin/fish
-    EOS
-  end
+  binary "#{appdir}/fish.app/Contents/Resources/base/usr/local/bin/fish"
 end
