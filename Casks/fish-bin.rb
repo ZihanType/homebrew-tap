@@ -13,5 +13,6 @@ cask "fish-bin" do
   end
 
   app "fish.app"
-  binary "#{appdir}/fish.app/Contents/Resources/base/usr/local/bin/fish"
+  binary "#{appdir}/fish.app/Contents/Resources/base/usr/local/bin/fish",
+         target: "/usr/local/bin/fish"
 end
