@@ -20,10 +20,4 @@ cask "fd-bin" do
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_fd"
   binary "fd-v#{version}-#{arch}-apple-darwin/autocomplete/fd.fish",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/fd.fish"
-
-  uninstall delete: [
-    "#{HOMEBREW_PREFIX}/etc/bash_completion.d/fd",
-    "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_fd",
-    "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/fd.fish",
-  ]
 end

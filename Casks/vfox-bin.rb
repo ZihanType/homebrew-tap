@@ -18,9 +18,4 @@ cask "vfox-bin" do
          target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/vfox"
   binary "vfox_#{version}_macos_#{arch}/completions/zsh_autocomplete",
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_vfox"
-
-  uninstall delete: [
-    "#{HOMEBREW_PREFIX}/etc/bash_completion.d/vfox",
-    "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_vfox",
-  ]
 end

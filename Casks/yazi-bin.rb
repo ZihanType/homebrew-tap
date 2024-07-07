@@ -30,13 +30,4 @@ cask "yazi-bin" do
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/ya.fish"
   binary "yazi-#{arch}-apple-darwin/completions/yazi.fish",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/yazi.fish"
-
-  uninstall delete: [
-    "#{HOMEBREW_PREFIX}/etc/bash_completion.d/ya",
-    "#{HOMEBREW_PREFIX}/etc/bash_completion.d/yazi",
-    "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_ya",
-    "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_yazi",
-    "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/ya.fish",
-    "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/yazi.fish",
-  ]
 end

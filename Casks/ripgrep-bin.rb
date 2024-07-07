@@ -20,10 +20,4 @@ cask "ripgrep-bin" do
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_rg"
   binary "ripgrep-#{version}-#{arch}-apple-darwin/complete/rg.fish",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/rg.fish"
-
-  uninstall delete: [
-    "#{HOMEBREW_PREFIX}/etc/bash_completion.d/rg",
-    "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_rg",
-    "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/rg.fish",
-  ]
 end

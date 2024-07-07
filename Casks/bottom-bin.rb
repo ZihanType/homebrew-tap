@@ -19,10 +19,4 @@ cask "bottom-bin" do
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_btm"
   binary "completion/btm.fish",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/btm.fish"
-
-  uninstall delete: [
-    "#{HOMEBREW_PREFIX}/etc/bash_completion.d/btm",
-    "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_btm",
-    "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/btm.fish",
-  ]
 end

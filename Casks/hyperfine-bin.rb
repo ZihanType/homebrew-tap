@@ -19,10 +19,4 @@ cask "hyperfine-bin" do
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_hyperfine"
   binary "hyperfine-v#{version}-x86_64-apple-darwin/autocomplete/hyperfine.fish",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/hyperfine.fish"
-
-  uninstall delete: [
-    "#{HOMEBREW_PREFIX}/etc/bash_completion.d/hyperfine",
-    "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_hyperfine",
-    "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/hyperfine.fish",
-  ]
 end
