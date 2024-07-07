@@ -21,9 +21,9 @@ cask "lsd-bin" do
   binary "lsd-v#{version}-#{arch}-apple-darwin/autocomplete/lsd.fish",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/lsd.fish"
 
-  uninstall delete: [
-    "#{HOMEBREW_PREFIX}/etc/bash_completion.d/lsd",
-    "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_lsd",
-    "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/lsd.fish",
-  ]
+#   uninstall delete: [
+#     "#{HOMEBREW_PREFIX}/etc/bash_completion.d/lsd",
+#     "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_lsd",
+#     "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/lsd.fish",
+#   ]
 end
