@@ -12,6 +12,8 @@ cask "fish-bin" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  conflicts_with formula: "fish"
+
   app "fish.app"
   binary "#{appdir}/fish.app/Contents/Resources/base/usr/local/bin/fish",
          target: "/usr/local/bin/fish"
