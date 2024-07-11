@@ -9,7 +9,7 @@ cask "cargo-clif-bin" do
   desc "Cranelift based backend for rustc"
   homepage "https://github.com/rust-lang/rustc_codegen_cranelift"
 
-  binary "bin/cargo-clif"
-  binary "bin/rustc-clif"
-  binary "bin/rustdoc-clif"
+  binary "dist/bin/cargo-clif"
+  binary "dist/bin/rustc-clif"
+  binary "dist/bin/rustdoc-clif"
 end
