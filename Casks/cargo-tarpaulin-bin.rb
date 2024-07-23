@@ -1,7 +1,7 @@
 cask "cargo-tarpaulin-bin" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.30.0"
+  version "0.31.0"
 
   url "https://github.com/xd009642/tarpaulin/releases/download/#{version}/cargo-tarpaulin-#{arch}-apple-darwin.tar.gz"
   name "cargo-tarpaulin-bin"
