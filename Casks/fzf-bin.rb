@@ -2,7 +2,7 @@ cask "fzf-bin" do
   arch arm: "arm64", intel: "amd64"
 
   version "0.54.2"
-  url "https://github.com/junegunn/fzf/releases/download/v#{version}/fzf-#{version}-darwin_#{arch}.zip"
+  url "https://github.com/junegunn/fzf/releases/download/v#{version}/fzf-#{version}-darwin_#{arch}.tar.gz"
   name "fzf-bin"
   desc "Command-line fuzzy finder written in Go"
   homepage "https://github.com/junegunn/fzf"
