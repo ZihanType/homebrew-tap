@@ -5,7 +5,7 @@ cask "cargo-nextest-bin" do
   url "https://github.com/nextest-rs/nextest/releases/download/cargo-nextest-#{version}/cargo-nextest-#{version}-universal-apple-darwin.tar.gz"
   name "cargo-nextest-bin"
   desc "Next-generation test runner for Rust"
-  homepage "https://nexte.st"
+  homepage "https://github.com/nextest-rs/nextest"
 
   livecheck do
     url :stable
