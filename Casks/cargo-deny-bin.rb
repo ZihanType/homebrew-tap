@@ -1,7 +1,7 @@
 cask "cargo-deny-bin" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.15.1"
+  version "0.16.0"
 
   url "https://github.com/EmbarkStudios/cargo-deny/releases/download/#{version}/cargo-deny-#{version}-#{arch}-apple-darwin.tar.gz"
   name "cargo-deny-bin"
