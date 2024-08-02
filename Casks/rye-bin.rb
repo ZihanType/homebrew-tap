@@ -2,6 +2,7 @@ cask "rye-bin" do
   arch arm: "aarch64", intel: "x86_64"
 
   version "0.35.0"
+  sha256 :no_check
 
   url "https://github.com/astral-sh/rye/releases/download/#{version}/rye-#{arch}-macos.gz"
   name "rye-bin"

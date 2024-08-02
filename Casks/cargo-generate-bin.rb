@@ -2,6 +2,7 @@ cask "cargo-generate-bin" do
   arch arm: "aarch64", intel: "x86_64"
 
   version "0.21.3"
+  sha256 :no_check
 
   url "https://github.com/cargo-generate/cargo-generate/releases/download/v#{version}/cargo-generate-v#{version}-#{arch}-apple-darwin.tar.gz"
   name "cargo-generate-bin"

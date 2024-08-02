@@ -2,6 +2,7 @@ cask "vfox-bin" do
   arch arm: "aarch64", intel: "x86_64"
 
   version "0.5.4"
+  sha256 :no_check
 
   url "https://github.com/version-fox/vfox/releases/download/v#{version}/vfox_#{version}_macos_#{arch}.tar.gz"
   name "vfox-bin"

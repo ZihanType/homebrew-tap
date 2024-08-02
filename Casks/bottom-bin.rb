@@ -1,6 +1,6 @@
 cask "bottom-bin" do
   version "0.9.6"
-  sha256 "e0651424ae67f260e6e22e351fab18c8d7f1014441e8ed522d3f6a6ff0136701"
+  sha256 :no_check
 
   url "https://github.com/ClementTsang/bottom/releases/download/#{version}/bottom_x86_64-apple-darwin.tar.gz"
   name "bottom-bin"

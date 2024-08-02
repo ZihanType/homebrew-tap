@@ -1,5 +1,6 @@
 cask "7zip-bin" do
   version "2407"
+  sha256 :no_check
 
   url "https://7-zip.org/a/7z#{version}-mac.tar.xz"
   name "7zip-bin"

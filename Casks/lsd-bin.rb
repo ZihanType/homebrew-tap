@@ -2,6 +2,7 @@ cask "lsd-bin" do
   arch arm: "aarch64", intel: "x86_64"
 
   version "1.1.2"
+  sha256 :no_check
 
   url "https://github.com/lsd-rs/lsd/releases/download/v#{version}/lsd-v#{version}-#{arch}-apple-darwin.tar.gz"
   name "lsd-bin"

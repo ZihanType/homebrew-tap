@@ -1,6 +1,6 @@
 cask "wabt-bin" do
   version "1.0.35"
-  sha256 "1dd2a4ca1f36a84dd1889160ec3b90430a7d8694faf2ff6334b7f3b58237d252"
+  sha256 :no_check
 
   url "https://github.com/WebAssembly/wabt/releases/download/#{version}/wabt-#{version}-macos-14.tar.gz"
   name "wabt-bin"

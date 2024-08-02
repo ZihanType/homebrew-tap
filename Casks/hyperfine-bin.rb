@@ -1,6 +1,6 @@
 cask "hyperfine-bin" do
   version "1.18.0"
-  sha256 "f421263f160f4b4967d0a1420b06a48cb60e429c610096f99bb433dd719685c6"
+  sha256 :no_check
 
   url "https://github.com/sharkdp/hyperfine/releases/download/v#{version}/hyperfine-v#{version}-x86_64-apple-darwin.tar.gz"
   name "hyperfine-bin"

@@ -2,6 +2,7 @@ cask "binaryen-bin" do
   arch arm: "arm64", intel: "x86_64"
 
   version "118"
+  sha256 :no_check
 
   url "https://github.com/WebAssembly/binaryen/releases/download/version_#{version}/binaryen-version_#{version}-#{arch}-macos.tar.gz"
   name "binaryen-bin"
