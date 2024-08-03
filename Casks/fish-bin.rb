@@ -17,4 +17,8 @@ cask "fish-bin" do
   app "fish.app"
   binary "#{appdir}/fish.app/Contents/Resources/base/usr/local/bin/fish",
          target: "/usr/local/bin/fish"
+  binary "#{appdir}/fish.app/Contents/Resources/base/usr/local/bin/fish_indent",
+         target: "/usr/local/bin/fish_indent"
+  binary "#{appdir}/fish.app/Contents/Resources/base/usr/local/bin/fish_key_reader",
+         target: "/usr/local/bin/fish_key_reader"
 end
