@@ -12,7 +12,7 @@ cask "cargo-tauri-bin" do
   livecheck do
     url "https://github.com/tauri-apps/tauri"
     strategy :page_match
-    regex(%r{.*/tauri-apps/tauri/releases/tag/tauri-cli-v(.+)}i)
+    regex(%r{.*/tauri-apps/tauri/releases/tag/tauri-cli-v(.+)"}i)
   end
 
   binary "cargo-tauri"
