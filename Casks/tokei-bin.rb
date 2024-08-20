@@ -10,7 +10,7 @@ cask "tokei-bin" do
   livecheck do
     url "https://github.com/XAMPPRocky/tokei/releases"
     strategy :page_match
-    regex(%r{.*/tauri-apps/tauri/releases/tag/tauri-cli-v(.+)" data-view-component="true"}i)
+    regex(%r{.*/XAMPPRocky/tokei/releases/tag/v([.\d]+)" data-view-component="true"}i)
   end
 
   binary "tokei"
