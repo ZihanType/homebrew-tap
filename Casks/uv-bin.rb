@@ -14,8 +14,8 @@ cask "uv-bin" do
     strategy :github_latest
   end
 
-  binary "uv"
-  binary "uvx"
+  binary "uv-#{arch}-apple-darwin/uv"
+  binary "uv-#{arch}-apple-darwin/uvx"
 
   def caveats
     <<~EOS
