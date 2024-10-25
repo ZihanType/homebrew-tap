@@ -14,5 +14,5 @@ cask "samply-bin" do
     regex(%r{.*newest_version: "([.\d]+)"}i)
   end
 
-  binary "samply"
+  binary "samply-#{arch}-apple-darwin/samply"
 end
