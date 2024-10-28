@@ -8,8 +8,8 @@ cask "cargo-nextest-bin" do
   homepage "https://github.com/nextest-rs/nextest"
 
   livecheck do
-    url :stable
-    regex(/^cargo-nextest[._-]v?(\d+(?:\.\d+)+)$/i)
+    url "https://crates.io/api/v1/crates/cargo-nextest"
+    regex(%r{.*"newest_version":"(.+?)"}i)
   end
 
   binary "cargo-nextest"
