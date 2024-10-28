@@ -11,7 +11,8 @@ cask "samply-bin" do
 
   livecheck do
     url "https://crates.io/api/v1/crates/samply"
-    regex(%r{.*"newest_version":"(.+)"}i)
+    # regex(%r{.*"newest_version":"([.\d]+)"}i)
+    regex(%r{.*"newest_version":"(.+?)"}i)
   end
 
   binary "samply-#{arch}-apple-darwin/samply"
