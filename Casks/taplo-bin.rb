@@ -10,9 +10,8 @@ cask "taplo-bin" do
   homepage "https://github.com/tamasfe/taplo"
 
   livecheck do
-    url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-    strategy :github_releases
+    url "https://crates.io/api/v1/crates/taplo-cli"
+    regex(%r{.*"newest_version":"(.+?)"}i)
   end
 
   binary "taplo"
