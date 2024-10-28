@@ -8,8 +8,8 @@ cask "fish-bin" do
   homepage "https://fishshell.com"
 
   livecheck do
-    url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    url :url
+    strategy :github_latest
   end
 
   conflicts_with formula: "fish"
