@@ -10,8 +10,8 @@ cask "jq-bin" do
   homepage "https://jqlang.github.io/jq/"
 
   livecheck do
-    url :stable
-    regex(/^(?:jq[._-])?v?(\d+(?:\.\d+)+)$/i)
+    url :url
+    strategy :github_latest
   end
 
   binary "jq-macos-#{arch}", target: "jq"
