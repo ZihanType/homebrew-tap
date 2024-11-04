@@ -1,7 +1,7 @@
 cask "create-tauri-app-bin" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.5.6"
+  version "4.5.7"
   sha256 :no_check
 
   url "https://github.com/tauri-apps/create-tauri-app/releases/download/create-tauri-app-v#{version}/create-tauri-app-#{arch}-apple-darwin"
