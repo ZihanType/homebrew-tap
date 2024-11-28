@@ -9,7 +9,7 @@ cask "cargo-nextest-bin" do
 
   livecheck do
     url "https://crates.io/api/v1/crates/cargo-nextest"
-    regex(%r{.*"newest_version":"(.+?)"}i)
+    regex(%r{.*"max_stable_version":"(.+?)"}i)
   end
 
   binary "cargo-nextest"
