@@ -8,9 +8,8 @@ cask "tokei-bin" do
   homepage "https://github.com/XAMPPRocky/tokei"
 
   livecheck do
-    url "https://github.com/XAMPPRocky/tokei/releases"
-    strategy :page_match
-    regex(%r{.*/XAMPPRocky/tokei/releases/tag/v([.\d]+)" data-view-component="true"}i)
+    url "https://crates.io/api/v1/crates/tokei"
+    regex(%r{.*"max_stable_version":"(.+?)"}i)
   end
 
   binary "tokei"
