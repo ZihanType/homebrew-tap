@@ -14,5 +14,5 @@ cask "bindgen-bin" do
     regex(%r{.*"max_stable_version":"(.+?)"}i)
   end
 
-  binary "bindgen"
+  binary "bindgen-cli-#{arch}-apple-darwin/bindgen"
 end
