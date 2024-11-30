@@ -1,7 +1,7 @@
 cask "wasm-bindgen-bin" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.2.96"
+  version "0.2.97"
   sha256 :no_check
 
   url "https://github.com/rustwasm/wasm-bindgen/releases/download/#{version}/wasm-bindgen-#{version}-#{arch}-apple-darwin.tar.gz"
