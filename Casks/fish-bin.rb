@@ -1,5 +1,5 @@
 cask "fish-bin" do
-  version "3.7.1"
+  version "4.0b1"
   sha256 :no_check
 
   url "https://github.com/fish-shell/fish-shell/releases/download/#{version}/fish-#{version}.app.zip"
