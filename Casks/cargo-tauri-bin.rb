@@ -1,7 +1,7 @@
 cask "cargo-tauri-bin" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "2.2.5"
+  version "2.2.6"
   sha256 :no_check
 
   url "https://github.com/tauri-apps/tauri/releases/download/tauri-cli-v#{version}/cargo-tauri-#{arch}-apple-darwin.zip"
