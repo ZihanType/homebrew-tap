@@ -1,7 +1,7 @@
 cask "samply-bin" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.12.0"
+  version "0.13.1"
   sha256 :no_check
 
   url "https://github.com/mstange/samply/releases/download/samply-v#{version}/samply-#{arch}-apple-darwin.tar.xz"
