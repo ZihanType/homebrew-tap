@@ -14,7 +14,8 @@ cask "fish-bin" do
 
   conflicts_with formula: "fish"
 
-  app "fish-#{version}.app", target: "fish.app"
+#   app "fish-#{version}.app", target: "fish.app"
+  app "fish-67b6aff.app", target: "fish.app"
   binary "#{appdir}/fish.app/Contents/Resources/base/usr/local/bin/fish",
          target: "/usr/local/bin/fish"
   binary "#{appdir}/fish.app/Contents/Resources/base/usr/local/bin/fish_indent",
