@@ -12,5 +12,5 @@ cask "ferrules-bin" do
     strategy :github_latest
   end
 
-  binary "ferrules"
+  binary "ferrules-aarch64-apple-darwin/ferrules"
 end
