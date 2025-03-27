@@ -1,7 +1,7 @@
 cask "trunk-bin" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.21.9"
+  version "0.21.11"
   sha256 :no_check
 
   url "https://github.com/thedodd/trunk/releases/download/v#{version}/trunk-#{arch}-apple-darwin.tar.gz"
