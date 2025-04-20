@@ -1,8 +1,9 @@
 cask "fish-bin" do
-  version "4.0.1"
+  version "4.0.2"
   sha256 :no_check
 
-  url "https://github.com/fish-shell/fish-shell/releases/download/#{version}/fish-#{version}.app.zip"
+#   url "https://github.com/fish-shell/fish-shell/releases/download/#{version}/fish-#{version}.app.zip"
+  url "https://github.com/fish-shell/fish-shell/releases/download/#{version}/fish-#{version}.zip"
   name "fish-bin"
   desc "User-friendly command-line shell for UNIX-like operating systems"
   homepage "https://fishshell.com"
@@ -14,8 +15,7 @@ cask "fish-bin" do
 
   conflicts_with formula: "fish"
 
-#   app "fish-#{version}.app", target: "fish.app"
-  app "fish-67b6aff.app", target: "fish.app"
+  app "fish-#{version}.app", target: "fish.app"
   binary "#{appdir}/fish.app/Contents/Resources/base/usr/local/bin/fish",
          target: "/usr/local/bin/fish"
   binary "#{appdir}/fish.app/Contents/Resources/base/usr/local/bin/fish_indent",
