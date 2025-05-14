@@ -4,7 +4,7 @@ cask "dx-bin" do
   version "0.7.0-alpha.0"
   sha256 :no_check
 
-  url "https://github.com/DioxusLabs/dioxus/releases/download/v#{version}/dx-#{arch}-apple-darwin-v#{version}.tar.gz"
+  url "https://github.com/DioxusLabs/dioxus/releases/download/v#{version}/dx-#{arch}-apple-darwin.tar.gz"
   name "dx-bin"
   desc "CLI tool for developing, testing, and publishing Dioxus apps"
   homepage "https://github.com/DioxusLabs/dioxus"
