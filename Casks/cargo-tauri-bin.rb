@@ -10,9 +10,8 @@ cask "cargo-tauri-bin" do
   homepage "https://github.com/tauri-apps/tauri"
 
   livecheck do
-    url "https://github.com/tauri-apps/tauri/releases"
-    strategy :page_match
-    regex(%r{.*/tauri-apps/tauri/releases/tag/tauri-cli-v(.+)" data-view-component="true"}i)
+    url "https://crates.io/api/v1/crates/tauri-cli"
+    regex(%r{.*"max_stable_version":"(.+?)"}i)
   end
 
   binary "cargo-tauri"
