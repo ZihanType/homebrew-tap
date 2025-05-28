@@ -1,7 +1,7 @@
 cask "yazi-bin" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "25.4.8"
+  version "25.5.28"
   sha256 :no_check
 
   url "https://github.com/sxyazi/yazi/releases/download/v#{version}/yazi-#{arch}-apple-darwin.zip"
