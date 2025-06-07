@@ -1,7 +1,7 @@
 cask "asdf-bin" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.17.0"
+  version "0.18.0"
   sha256 :no_check
 
   url "https://github.com/asdf-vm/asdf/releases/download/v#{version}/asdf-v#{version}-darwin-#{arch}.tar.gz"
