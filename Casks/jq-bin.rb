@@ -1,7 +1,7 @@
 cask "jq-bin" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.8.0"
+  version "1.8.1"
   sha256 :no_check
 
   url "https://github.com/jqlang/jq/releases/download/jq-#{version}/jq-macos-#{arch}"
