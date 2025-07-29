@@ -1,7 +1,7 @@
 cask "grcov-bin" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.10.1"
+  version "0.10.2"
   sha256 :no_check
 
   url "https://github.com/mozilla/grcov/releases/download/v#{version}/grcov-#{arch}-apple-darwin.tar.bz2"
