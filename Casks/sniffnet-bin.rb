@@ -7,7 +7,7 @@ cask "sniffnet-bin" do
   url "https://github.com/GyulyVGC/sniffnet/releases/download/v#{version}/Sniffnet_macOS_#{arch}.dmg"
   name "sniffnet-bin"
   desc "Cross-platform application to monitor your network traffic"
-  homepage https://github.com/GyulyVGC/sniffnet
+  homepage "https://github.com/GyulyVGC/sniffnet"
 
   livecheck do
     url :url
