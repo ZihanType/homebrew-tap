@@ -13,7 +13,7 @@ cask "fish-bin" do
     strategy :github_latest
   end
 
-  conflicts_with formula: "fish"
+#   conflicts_with formula: "fish"
 
   app "fish-#{version}.app", target: "fish.app"
   binary "#{appdir}/fish.app/Contents/Resources/base/usr/local/bin/fish",
