@@ -1,7 +1,7 @@
 cask "fd-bin" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "10.2.0"
+  version "10.3.0"
   sha256 :no_check
 
   url "https://github.com/sharkdp/fd/releases/download/v#{version}/fd-v#{version}-#{arch}-apple-darwin.tar.gz"
