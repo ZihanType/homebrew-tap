@@ -1,7 +1,7 @@
 cask "dx-bin" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.7.0-rc.0"
+  version "0.7.0-rc.1"
   sha256 :no_check
 
   url "https://github.com/DioxusLabs/dioxus/releases/download/v#{version}/dx-#{arch}-apple-darwin.tar.gz"
