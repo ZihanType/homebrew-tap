@@ -1,7 +1,7 @@
 cask "ripgrep-bin" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "15.0.0"
+  version "15.1.0"
   sha256 :no_check
 
   url "https://github.com/BurntSushi/ripgrep/releases/download/#{version}/ripgrep-#{version}-#{arch}-apple-darwin.tar.gz"
