@@ -14,7 +14,7 @@ cask "bun-bin" do
     regex(%r{href=.*?/tag/bun-v?(\d+(?:\.\d+)+)["' >]}i)
   end
 
-  binary "bun"
-  binary "bun", target: "bunx"
-  binary "bun", target: "node"
+  binary "bun-darwin-#{arch}/bun"
+  binary "bun-darwin-#{arch}/bun", target: "bunx"
+  binary "bun-darwin-#{arch}/bun", target: "node"
 end
