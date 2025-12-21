@@ -17,4 +17,18 @@ cask "bun-bin" do
   binary "bun-darwin-#{arch}/bun"
   binary "bun-darwin-#{arch}/bun", target: "bunx"
   binary "bun-darwin-#{arch}/bun", target: "node"
+
+  # [install]
+  # linker = "hoisted"
+
+  # 将上面的内容写入到 $HOME/.bun/install/global/bunfig.toml 文件中
+  postflight do
+    bunfig_dir = File.join(Dir.home, ".bun", "install", "global")
+    bunfig_path = File.join(bunfig_dir, "bunfig.toml")
+    FileUtils.mkdir_p(bunfig_dir)
+    File.open(bunfig_path, "w") do |file|
+      file.puts('[install]')
+      file.puts('linker = "hoisted"')
+    end
+  end
 end
