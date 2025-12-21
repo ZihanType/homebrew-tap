@@ -18,6 +18,17 @@ cask "bun-bin" do
   binary "bun-darwin-#{arch}/bun", target: "bunx"
   binary "bun-darwin-#{arch}/bun", target: "node"
 
+  # 如果当前用户已经安装了 node，则报错并提示当前 cask 与 node 冲突
+  preflight do
+    if Utils.which("node")
+      odie <<~EOS
+        bun-bin cannot be installed because it conflicts with Node.js found in your PATH.
+
+        Please uninstall Node.js before installing bun-bin.
+      EOS
+    end
+  end
+
   # [install]
   # linker = "hoisted"
 
