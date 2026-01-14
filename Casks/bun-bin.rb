@@ -1,7 +1,7 @@
 cask "bun-bin" do
   arch arm: "aarch64", intel: "x64"
 
-  version "1.3.5"
+  version "1.3.6"
   sha256 :no_check
 
   url "https://github.com/oven-sh/bun/releases/download/bun-v#{version}/bun-darwin-#{arch}.zip"
