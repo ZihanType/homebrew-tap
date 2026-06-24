@@ -1,5 +1,5 @@
 cask "cargo-fuzz-bin" do
-  version "0.12.0"
+  version "0.13.2"
   sha256 :no_check
 
   url "https://github.com/rust-fuzz/cargo-fuzz/releases/download/#{version}/cargo-fuzz-#{version}-x86_64-apple-darwin.tar.gz"
