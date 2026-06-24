@@ -120,14 +120,13 @@ class UpdateCasks
     warn stderr unless stderr.to_s.strip.empty?
 
     stdout, stderr, status = Open3.capture3(livecheck_env, *livecheck_command(nil, qualified), chdir: @repo_root.to_s)
-    output = partial_results_output(stdout, stderr, tokens)
-    return output if status.success?
+    return preferred_livecheck_output(stdout, stderr) if status.success?
 
-    unless output.nil?
-      warn stderr unless stderr.to_s.strip.empty? || output == stderr
-      warn "brew livecheck exited non-zero; continuing with partial results"
-      return output
-    end
+    warn "brew livecheck batch run exited non-zero; retrying per cask"
+    output, failures = run_livecheck_per_token(tokens)
+    failures.each { |failure| warn failure }
+    return output unless output.empty?
+    raise "brew livecheck failed\n#{failures.join("\n")}" unless failures.empty?
 
     detail = [stderr, stdout].map { |value| value.to_s.strip }.reject(&:empty?).join("\n")
     raise "brew livecheck failed\n#{detail}"
@@ -150,6 +149,32 @@ class UpdateCasks
     end
 
     env
+  end
+
+  def run_livecheck_per_token(tokens)
+    outputs = []
+    failures = []
+
+    tokens.each do |token|
+      stdout, stderr, status = Open3.capture3(
+        livecheck_env,
+        *livecheck_command(nil, [qualify_token(token)]),
+        chdir: @repo_root.to_s,
+      )
+
+      output = partial_results_output(stdout, stderr, [token])
+      unless output.nil?
+        outputs << output
+        next
+      end
+
+      next if status.success?
+
+      detail = [stderr, stdout].map { |value| strip_ansi(value).strip }.reject(&:empty?).join("\n")
+      failures << "#{token}: #{detail.empty? ? 'livecheck failed without output' : detail}"
+    end
+
+    [outputs.join("\n"), failures]
   end
 
   def partial_results_output(stdout, stderr, tokens)
