@@ -16,6 +16,11 @@ jobs:
   update:
     runs-on: macos-26
 
+    env:
+      HOMEBREW_DEVELOPER: 1
+      HOMEBREW_NO_AUTO_UPDATE: 1
+      HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
@@ -29,13 +34,6 @@ jobs:
           repo="${GITHUB_REPOSITORY#*/}"
           repo="${repo#homebrew-}"
           echo "tap_name=${owner}/${repo}" >> "$GITHUB_OUTPUT"
-
-      - name: Configure Homebrew environment
-        run: |
-          echo "HOMEBREW_GITHUB_API_TOKEN=${GITHUB_TOKEN}" >> "$GITHUB_ENV"
-          echo "HOMEBREW_NO_AUTO_UPDATE=1" >> "$GITHUB_ENV"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Tap checked-out repository
         run: brew tap --custom-remote "${{ steps.tap.outputs.tap_name }}" "$GITHUB_WORKSPACE"
