@@ -7,6 +7,7 @@ require "optparse"
 require "pathname"
 
 class UpdateCasks
+  ANSI_ESCAPE_PATTERN = /\e\[[0-9;]*[A-Za-z]/.freeze
   VERSION_LINE = /^(\s*version\s+")([^"]+)(".*)$/
   TOKEN_PATTERNS = [
     /(^|\.)(full_token|token|full_name|name|cask|formula)$/i,
@@ -251,7 +252,7 @@ class UpdateCasks
 
   def parse_text_results(output)
     output.to_s.each_line.each_with_object({}) do |line, result|
-      line = line.strip
+      line = strip_ansi(line).strip
       next if line.empty?
       next if line.start_with?("Warning:")
 
@@ -264,6 +265,10 @@ class UpdateCasks
         result[normalize_token(match[:name])] = match[:latest].strip
       end
     end
+  end
+
+  def strip_ansi(value)
+    value.to_s.gsub(ANSI_ESCAPE_PATTERN, "")
   end
 
   def apply_updates(candidates, updates)
