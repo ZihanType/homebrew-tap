@@ -1,5 +1,5 @@
 cask "ferrules-bin" do
-  version "0.1.7"
+  version "0.1.11"
   sha256 :no_check
 
   url "https://github.com/AmineDiro/ferrules/releases/download/v#{version}/ferrules-aarch64-apple-darwin.tar.xz"
