@@ -9,6 +9,11 @@ cask "snapzy" do
 
   depends_on macos: :ventura
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Snapzy.app"
 
   zap trash: [

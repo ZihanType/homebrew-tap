@@ -1,0 +1,83 @@
+name: Update Casks
+
+on:
+  schedule:
+    - cron: "0 */4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-casks-${{ github.repository }}
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: macos-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Derive tap name
+        id: tap
+        run: |
+          owner="${GITHUB_REPOSITORY%/*}"
+          repo="${GITHUB_REPOSITORY#*/}"
+          repo="${repo#homebrew-}"
+          echo "tap_name=${owner}/${repo}" >> "$GITHUB_OUTPUT"
+
+      - name: Configure Homebrew environment
+        run: |
+          echo "HOMEBREW_GITHUB_API_TOKEN=${GITHUB_TOKEN}" >> "$GITHUB_ENV"
+          echo "HOMEBREW_NO_AUTO_UPDATE=1" >> "$GITHUB_ENV"
+          echo "HOMEBREW_NO_REQUIRE_TAP_TRUST=1" >> "$GITHUB_ENV"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Tap checked-out repository
+        run: brew tap --custom-remote "${{ steps.tap.outputs.tap_name }}" "$GITHUB_WORKSPACE"
+
+      - name: Update eligible casks
+        run: ruby script/update-casks.rb
+        env:
+          TAP_NAME: ${{ steps.tap.outputs.tap_name }}
+
+      - name: Validate changed files
+        run: |
+          ruby -c script/update-casks.rb
+          changed_files=$(git diff --name-only -- Casks)
+          if [ -z "$changed_files" ]; then
+            exit 0
+          fi
+
+          while IFS= read -r file; do
+            [ -n "$file" ] || continue
+            ruby -c "$file"
+          done <<< "$changed_files"
+
+      - name: Commit updated casks
+        run: |
+          if git diff --quiet --exit-code; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          changed_files=$(git diff --name-only -- Casks | sort)
+          while IFS= read -r file; do
+            [ -n "$file" ] || continue
+
+            token=$(basename "$file" .rb)
+            cask_version=$(ruby -e 'content = File.read(ARGV[0]); match = content.match(/^\s*version\s+"([^"]+)"/); abort("missing version") unless match; puts match[1]' "$file")
+
+            git add "$file"
+            git commit -m "chore: update ${token} to ${cask_version}"
+          done <<< "$changed_files"
+
+          git push
