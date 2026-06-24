@@ -1,14 +1,15 @@
 cask "wabt-bin" do
-  version "1.0.36"
+  version "1.0.41"
   sha256 :no_check
 
-  url "https://github.com/WebAssembly/wabt/releases/download/#{version}/wabt-#{version}-macos-14.tar.gz"
+  url "https://github.com/WebAssembly/wabt/releases/download/#{version}/wabt-#{version}-macos-arm64.tar.gz"
   name "wabt-bin"
   desc "Web Assembly Binary Toolkit"
   homepage "https://github.com/WebAssembly/wabt"
+  depends_on arch: :arm64
 
   livecheck do
-    url :stable
+    url :url
     strategy :github_latest
   end
 
