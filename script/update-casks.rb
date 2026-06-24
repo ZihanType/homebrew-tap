@@ -114,17 +114,18 @@ class UpdateCasks
   def run_livecheck(tokens)
     qualified = tokens.map { |token| qualify_token(token) }
     stdout, stderr, status = Open3.capture3(livecheck_env, *livecheck_command("--json", qualified), chdir: @repo_root.to_s)
-    return stdout if status.success?
+    return preferred_livecheck_output(stdout, stderr) if status.success?
 
     warn stderr unless stderr.to_s.strip.empty?
 
     stdout, stderr, status = Open3.capture3(livecheck_env, *livecheck_command(nil, qualified), chdir: @repo_root.to_s)
-    return stdout if status.success?
+    output = partial_results_output(stdout, stderr, tokens)
+    return output if status.success?
 
-    if usable_partial_results?(stdout, tokens)
-      warn stderr unless stderr.to_s.strip.empty?
+    unless output.nil?
+      warn stderr unless stderr.to_s.strip.empty? || output == stderr
       warn "brew livecheck exited non-zero; continuing with partial results"
-      return stdout
+      return output
     end
 
     detail = [stderr, stdout].map { |value| value.to_s.strip }.reject(&:empty?).join("\n")
@@ -148,6 +149,19 @@ class UpdateCasks
     end
 
     env
+  end
+
+  def partial_results_output(stdout, stderr, tokens)
+    [stdout, stderr, [stdout, stderr].reject(&:empty?).join("\n")].find do |output|
+      usable_partial_results?(output, tokens)
+    end
+  end
+
+  def preferred_livecheck_output(stdout, stderr)
+    return stdout unless stdout.to_s.strip.empty?
+    return stderr unless stderr.to_s.strip.empty?
+
+    stdout
   end
 
   def usable_partial_results?(output, tokens)
