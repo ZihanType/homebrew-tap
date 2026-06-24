@@ -133,10 +133,15 @@ class UpdateCasks
   end
 
   def livecheck_env
-    {
+    env = {
       "HOMEBREW_NO_AUTO_UPDATE" => ENV.fetch("HOMEBREW_NO_AUTO_UPDATE", "1"),
-      "HOMEBREW_NO_REQUIRE_TAP_TRUST" => ENV.fetch("HOMEBREW_NO_REQUIRE_TAP_TRUST", "1"),
     }
+
+    if ENV.key?("HOMEBREW_NO_REQUIRE_TAP_TRUST")
+      env["HOMEBREW_NO_REQUIRE_TAP_TRUST"] = ENV.fetch("HOMEBREW_NO_REQUIRE_TAP_TRUST")
+    end
+
+    env
   end
 
   def parse_livecheck_output(output)

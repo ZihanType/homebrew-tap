@@ -34,12 +34,14 @@ jobs:
         run: |
           echo "HOMEBREW_GITHUB_API_TOKEN=${GITHUB_TOKEN}" >> "$GITHUB_ENV"
           echo "HOMEBREW_NO_AUTO_UPDATE=1" >> "$GITHUB_ENV"
-          echo "HOMEBREW_NO_REQUIRE_TAP_TRUST=1" >> "$GITHUB_ENV"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Tap checked-out repository
         run: brew tap --custom-remote "${{ steps.tap.outputs.tap_name }}" "$GITHUB_WORKSPACE"
+
+      - name: Trust tapped repository
+        run: brew trust --tap "${{ steps.tap.outputs.tap_name }}"
 
       - name: Update eligible casks
         run: ruby script/update-casks.rb
