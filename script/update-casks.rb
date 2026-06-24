@@ -121,6 +121,12 @@ class UpdateCasks
     stdout, stderr, status = Open3.capture3(livecheck_env, *livecheck_command(nil, qualified), chdir: @repo_root.to_s)
     return stdout if status.success?
 
+    if usable_partial_results?(stdout, tokens)
+      warn stderr unless stderr.to_s.strip.empty?
+      warn "brew livecheck exited non-zero; continuing with partial results"
+      return stdout
+    end
+
     detail = [stderr, stdout].map { |value| value.to_s.strip }.reject(&:empty?).join("\n")
     raise "brew livecheck failed\n#{detail}"
   end
@@ -142,6 +148,13 @@ class UpdateCasks
     end
 
     env
+  end
+
+  def usable_partial_results?(output, tokens)
+    parsed = parse_livecheck_output(output)
+    !(parsed.keys & tokens).empty?
+  rescue StandardError
+    false
   end
 
   def parse_livecheck_output(output)
