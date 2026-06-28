@@ -1,7 +1,7 @@
 cask "starship-bin" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.25.1"
+  version "1.26.0"
   sha256 :no_check
 
   url "https://github.com/starship/starship/releases/download/v#{version}/starship-#{arch}-apple-darwin.tar.gz"
