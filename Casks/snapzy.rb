@@ -1,5 +1,5 @@
 cask "snapzy" do
-  version "1.26.0"
+  version "1.27.0"
   sha256 :no_check
 
   url "https://github.com/duongductrong/Snapzy/releases/download/v#{version}/Snapzy-v#{version}.dmg"
