@@ -1,5 +1,5 @@
 cask "bottom-bin" do
-  version "0.14.2"
+  version "0.14.3"
   sha256 :no_check
 
   url "https://github.com/ClementTsang/bottom/releases/download/#{version}/bottom_x86_64-apple-darwin.tar.gz"
