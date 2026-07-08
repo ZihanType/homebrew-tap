@@ -8,7 +8,7 @@ cask "typora-0.11.18" do
   homepage "https://typora.io/"
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: :high_sierra
 
   app "Typora.app"
 
