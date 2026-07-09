@@ -1,5 +1,5 @@
 cask "edgedriver" do
-  version "150.0.4078.50"
+  version "150.0.4078.65"
   sha256 :no_check
   linkid = Hardware::CPU.intel? ? "2069148" : "2093504"
 
