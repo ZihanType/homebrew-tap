@@ -1,7 +1,7 @@
 cask "lark-cli-bin" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.0.71"
+  version "1.0.72"
   sha256 :no_check
 
   url "https://github.com/larksuite/cli/releases/download/v#{version}/lark-cli-#{version}-darwin-#{arch}.tar.gz"
