@@ -1,7 +1,7 @@
 cask "pandoc-bin" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.10"
+  version "3.10.1"
   sha256 :no_check
 
   url "https://github.com/jgm/pandoc/releases/download/#{version}/pandoc-#{version}-#{arch}-macOS.zip"
