@@ -9,6 +9,11 @@ cask "macwake" do
 
   depends_on macos: :sonoma
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "MacWake.app"
 
   zap trash: [
