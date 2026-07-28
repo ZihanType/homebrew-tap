@@ -11,6 +11,7 @@ cask "rust-analyzer-bin" do
 
   livecheck do
     url :url
+    regex(/(\d{4}-\d{2}-\d{2})/i)
     strategy :github_latest
   end
 
