@@ -1,7 +1,7 @@
 cask "rust-analyzer-bin" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "2026-07-06"
+  version "2026-07-27"
   sha256 :no_check
 
   url "https://github.com/rust-lang/rust-analyzer/releases/download/#{version}/rust-analyzer-#{arch}-apple-darwin.gz"
