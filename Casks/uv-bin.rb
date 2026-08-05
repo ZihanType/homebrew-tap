@@ -2,7 +2,7 @@ cask "uv-bin" do
   arch arm: "aarch64", intel: "x86_64"
   sha256 :no_check
 
-  version "0.12.1"
+  version "0.12.2"
 
   url "https://github.com/astral-sh/uv/releases/download/#{version}/uv-#{arch}-apple-darwin.tar.gz"
   name "uv-bin"
