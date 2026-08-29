@@ -1,6 +1,6 @@
 cask "ppp" do
-  version "26.2.2-57373"
-  sha256 "42c30c3f317b451c367adc472e238773ca1f4ab3beae4ff74f5637fb3027c273"
+  version "26.4.1-57516"
+  sha256 "f32a4ff2bf5d522392a9d28c133b0c768dd09b757634f33f301c7cb21d243b1f"
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
   name "Parallels Desktop"
@@ -33,21 +33,17 @@ cask "ppp" do
 
   app "Parallels Desktop.app"
 
-  preflight do
-    system_command "chflags",
-                   args: ["nohidden", "#{staged_path}/Parallels Desktop.app"]
-    system_command "xattr",
-                   args: ["-d", "com.apple.FinderInfo", "#{staged_path}/Parallels Desktop.app"]
+  preflight_steps do
+    run "chflags", args: ["nohidden", "{{staged_path}}/Parallels Desktop.app"]
+    run "xattr", args: ["-d", "com.apple.FinderInfo", "{{staged_path}}/Parallels Desktop.app"]
   end
 
-  postflight do
-    system_command "#{appdir}/Parallels Desktop.app/Contents/MacOS/inittool",
-                   args: ["init"],
-                   sudo: true
+  postflight_steps do
+    run "Parallels Desktop.app/Contents/MacOS/inittool", args: ["init"], base: :appdir, sudo: true
   end
 
-  uninstall_preflight do
-    set_ownership "#{appdir}/Parallels Desktop.app"
+  uninstall_preflight_steps do
+    set_ownership "Parallels Desktop.app", base: :appdir
   end
 
   uninstall signal: ["TERM", "com.parallels.desktop.console"],
@@ -59,17 +55,18 @@ cask "ppp" do
               must_succeed: false,
             },
             delete: [
-              "/Library/Preferences/Parallels",
               "/usr/local/bin/prl_convert",
               "/usr/local/bin/prl_disk_tool",
               "/usr/local/bin/prl_perf_ctl",
+              "/usr/local/bin/prlcopy",
               "/usr/local/bin/prlcore2dmp",
               "/usr/local/bin/prlctl",
               "/usr/local/bin/prlexec",
               "/usr/local/bin/prlsrvctl",
             ]
 
-  zap trash: [
+  zap delete: "/Library/Preferences/Parallels",
+      trash:  [
         "~/.parallels_settings",
         "~/Applications (Parallels)",
         "~/Library/Application Scripts/*.com.parallels.Desktop",
@@ -94,7 +91,7 @@ cask "ppp" do
         "~/Library/Preferences/Parallels",
         "~/Library/Saved Application State/com.parallels.desktop.console.savedState",
       ],
-      rmdir: [
+      rmdir:  [
         "/Users/Shared/Parallels",
         "~/Library/Caches/Parallels Software",
         "~/Library/Parallels",
