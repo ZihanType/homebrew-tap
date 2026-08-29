@@ -1,4 +1,4 @@
-cask "ppp" do
+cask "parallels" do
   version "26.4.1-57516"
   sha256 "f32a4ff2bf5d522392a9d28c133b0c768dd09b757634f33f301c7cb21d243b1f"
 
