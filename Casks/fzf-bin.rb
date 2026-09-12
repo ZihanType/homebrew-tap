@@ -1,7 +1,7 @@
 cask "fzf-bin" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.74.3"
+  version "0.74.4"
   sha256 :no_check
 
   url "https://github.com/junegunn/fzf/releases/download/v#{version}/fzf-#{version}-darwin_#{arch}.tar.gz"
