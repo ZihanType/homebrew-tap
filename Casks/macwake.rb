@@ -1,5 +1,5 @@
 cask "macwake" do
-  version "1.85"
+  version "1.86"
   sha256 :no_check
 
   url "https://github.com/Jarvis322/MacWake/releases/download/v#{version}/Wake-#{version}.dmg"
