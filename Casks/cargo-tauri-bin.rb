@@ -10,7 +10,8 @@ cask "cargo-tauri-bin" do
   homepage "https://github.com/tauri-apps/tauri"
 
   livecheck do
-    url "https://crates.io/api/v1/crates/tauri-cli"
+    # Use a browser User-Agent directly to avoid Homebrew's deprecated crates.io fallback.
+    url "https://crates.io/api/v1/crates/tauri-cli", user_agent: :browser
     regex(%r{.*"max_stable_version":"(.+?)"}i)
   end
 

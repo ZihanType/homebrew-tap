@@ -10,7 +10,8 @@ cask "samply-bin" do
   homepage "https://github.com/mstange/samply"
 
   livecheck do
-    url "https://crates.io/api/v1/crates/samply"
+    # Use a browser User-Agent directly to avoid Homebrew's deprecated crates.io fallback.
+    url "https://crates.io/api/v1/crates/samply", user_agent: :browser
     regex(%r{.*"max_stable_version":"(.+?)"}i)
   end
 

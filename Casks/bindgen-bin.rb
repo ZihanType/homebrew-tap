@@ -11,7 +11,8 @@ cask "bindgen-bin" do
   homepage "https://github.com/rust-lang/rust-bindgen"
 
   livecheck do
-    url "https://crates.io/api/v1/crates/bindgen-cli"
+    # Use a browser User-Agent directly to avoid Homebrew's deprecated crates.io fallback.
+    url "https://crates.io/api/v1/crates/bindgen-cli", user_agent: :browser
     regex(%r{.*"max_stable_version":"(.+?)"}i)
   end
 

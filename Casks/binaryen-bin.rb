@@ -11,8 +11,9 @@ cask "binaryen-bin" do
 
   livecheck do
     url "https://github.com/WebAssembly/binaryen"
-    strategy :page_match
-    regex(%r{.*/WebAssembly/binaryen/releases/tag/version_([.\d]+)}i)
+    # Check the release supplying our binaries instead of scraping repository HTML.
+    regex(/^version[._-](\d+(?:\.\d+)*)$/i)
+    strategy :github_latest
   end
 
   binary "binaryen-version_#{version}/bin/binaryen-unittests"
