@@ -1,5 +1,5 @@
 cask "wasm-pack-bin" do
-  version "0.15.0"
+  version "0.15.1"
   sha256 :no_check
 
   url "https://github.com/rustwasm/wasm-pack/releases/download/v#{version}/wasm-pack-v#{version}-x86_64-apple-darwin.tar.gz"
