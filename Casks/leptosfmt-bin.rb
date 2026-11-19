@@ -1,7 +1,7 @@
 cask "leptosfmt-bin" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.1.33"
+  version "0.1.34"
   sha256 :no_check
 
   url "https://github.com/bram209/leptosfmt/releases/download/#{version}/leptosfmt-#{version}-#{arch}-apple-darwin.tar.gz"
